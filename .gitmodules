@@ -1,0 +1,9 @@
+[submodule "imx-secure-enclave"]
+	path = imx-secure-enclave
+	url = https://github.com/nxp-imx/imx-secure-enclave
+[submodule "lv_drivers"]
+	path = lv_drivers
+	url = https://github.com/lvgl/lv_drivers
+[submodule "lvgl"]
+	path = lvgl
+	url = https://github.com/lvgl/lvgl
