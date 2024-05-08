@@ -9,7 +9,7 @@
 #ifndef READ_RNG_H
 #define READ_RNG_H
 
-#include "hsm_api.h"
+#include <hsm_api.h>
 
 hsm_hdl_t readRandom(int len, uint8_t *ptr);
 

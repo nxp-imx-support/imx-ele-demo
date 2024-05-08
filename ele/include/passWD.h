@@ -9,7 +9,7 @@
 #ifndef PASSWD_H
 #define PASSWD_H
 
-#include "hsm_api.h"
+#include <hsm_api.h>
 #include <stdbool.h>
 
 typedef struct{

@@ -11,27 +11,19 @@ BIN = eledemo
 LVGL_DIR_NAME ?= lvgl
 LVGL_DIR ?= .
 PRJ_DIR ?= .
-ELELIBDIR := imx-secure-enclave
 ELESRCDIR := ele
  
 INCLUDE_PATHS :=	-I$(LVGL_DIR)/ \
 					-I$(LVGL_DIR)/lv_modules/src/lv_demo_init_icon/ \
 					-I$(LVGL_DIR)/lvgl/ \
 					-I$(LVGL_DIR)/lv_drivers/wayland/ \
-					-I$(LVGL_DIR)/$(ELELIBDIR)/include \
-					-I$(LVGL_DIR)/$(ELELIBDIR)/include/hsm \
-					-I$(LVGL_DIR)/$(ELELIBDIR)/include/she \
-					-I$(LVGL_DIR)/$(ELELIBDIR)/include/common \
 					-I$(LVGL_DIR)/$(ELESRCDIR)/include \
 					-I$(LVGL_DIR)/custom \
 					-I$(LVGL_DIR)/generated
 
-DEFINES =   -D PSA_COMPLIANT \
-			-D SECONDARY_API_SUPPORTED
 
-LDFLAGS := -L $(LVGL_DIR)/$(ELELIBDIR) -lcrypto -l:libele_hsm.so.1.0  -lwayland-client -lxkbcommon -lwayland-cursor \
+LDFLAGS := -lcrypto -lele_hsm  -lwayland-client -lxkbcommon -lwayland-cursor \
 
-CFLAGS += ${DEFINES}
 CFLAGS += ${INCLUDE_PATHS}
 
 #Collect the files to compile

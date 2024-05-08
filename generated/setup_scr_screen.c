@@ -16,7 +16,7 @@
 
 #include"read_rng.h"
 
-#include "hsm_api.h"
+#include <hsm_api.h>
 #include "cryptoExample.h"
 
 extern lv_img_dsc_t g_originalImage;
