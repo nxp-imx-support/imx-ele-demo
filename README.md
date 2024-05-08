@@ -57,6 +57,7 @@ This demo uses data storage of ELE to store the password's hash of AES crypto. T
 
 ```bash
 git clone --recurse-submodules [repo_url]
+cd imx-ele-demo
 ```
 
 ### 3.2 Set the environment
@@ -68,12 +69,13 @@ source /opt/fsl-imx-internal-xwayland/6.1-langdale/environment-setup-armv8a-poky
 
 ### 3.3 Build
 
-make imx-secure-enclave library and apply patch for lvgl first
+make [imx-secure-enclave](https://github.com/nxp-imx/imx-secure-enclave) library and apply patch for lvgl first
 ```bash
-PROJDIR=$(pwd)
-cd $PROJDIR/imx-secure-enclave
+cd /path/to/imx-secure-enclave
 make PLAT=ele
+export ELE_ROOT=/path/to/imx-secure-enclave
 
+PROJDIR=$(pwd)
 cp -rf $PROJDIR/protocols/ $PROJDIR/lv_drivers/wayland/
 
 cd $PROJDIR/lv_drivers
