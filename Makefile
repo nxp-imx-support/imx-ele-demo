@@ -12,19 +12,31 @@ LVGL_DIR_NAME ?= lvgl
 LVGL_DIR ?= .
 PRJ_DIR ?= .
 ELESRCDIR := ele
- 
+
+ELE_ROOT ?= /path/to/imx-secure-enclave
+
+ELE_LIBRARIES := $(shell dirname $(shell find $(ELE_ROOT) -name "libele_hsm.so"))
+ELE_HSM_INCLUDE_DIR := $(shell dirname $(shell find $(ELE_ROOT) -name "hsm_api.h"))
+ELE_HSM_INCLUDE_DIR_PARENT := $(shell dirname $(ELE_HSM_INCLUDE_DIR))
+
 INCLUDE_PATHS :=	-I$(LVGL_DIR)/ \
 					-I$(LVGL_DIR)/lv_modules/src/lv_demo_init_icon/ \
 					-I$(LVGL_DIR)/lvgl/ \
 					-I$(LVGL_DIR)/lv_drivers/wayland/ \
 					-I$(LVGL_DIR)/$(ELESRCDIR)/include \
 					-I$(LVGL_DIR)/custom \
-					-I$(LVGL_DIR)/generated
+					-I$(LVGL_DIR)/generated \
+					-I$(ELE_HSM_INCLUDE_DIR) \
+					-I$(ELE_HSM_INCLUDE_DIR_PARENT)
 
-
-LDFLAGS := -lcrypto -lele_hsm  -lwayland-client -lxkbcommon -lwayland-cursor \
+LDFLAGS := -L$(ELE_LIBRARIES) -lcrypto -lele_hsm  -lwayland-client -lxkbcommon -lwayland-cursor \
 
 CFLAGS += ${INCLUDE_PATHS}
+
+DEFINES =   -D PSA_COMPLIANT \
+			-D SECONDARY_API_SUPPORTED
+
+CFLAGS += ${DEFINES}
 
 #Collect the files to compile
 MAINSRC = ./main.c
