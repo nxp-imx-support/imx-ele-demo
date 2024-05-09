@@ -13,7 +13,11 @@ LVGL_DIR ?= .
 PRJ_DIR ?= .
 ELESRCDIR := ele
 
-ELE_ROOT ?= /path/to/imx-secure-enclave
+# ELE_ROOT is the /path/to/imx-secure-enclave
+# this macro is used to find the path for libele_hsm.so and header files
+ifndef ELE_ROOT
+$(error "ELE_ROOT not defined")
+endif
 
 ELE_LIBRARIES := $(shell dirname $(shell find $(ELE_ROOT) -name "libele_hsm.so"))
 ELE_HSM_INCLUDE_DIR := $(shell dirname $(shell find $(ELE_ROOT) -name "hsm_api.h"))
