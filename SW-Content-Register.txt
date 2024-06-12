@@ -1,9 +1,9 @@
 NXP Software Content Register
 
 Release Name:               i.MX EdgeLock Enclave demo
-Version:                    1.0
-Date Created:               February 2024
-Outgoing License:           LA_OPT_NXP_Software_License v54 February 2024 - Additional distribution license granted - Section 2.3 applies
+Version:                    1.1
+Date Created:               June 2024
+Outgoing License:           LA_OPT_NXP_Software_License v56 April 2024 - Additional distribution license granted - Section 2.3 applies
 License File:               LICENSE.txt
 Type of content:            Source, scripts
 Description:                EdgeLock Enclave (ELE) demo for i.MX93
@@ -11,16 +11,6 @@ Release Location:           https://github.com/nxp-imx-support/imx-ele-demo
 Origin:                     NXP (proprietary)
 
 --------------------------------------------
-
-Package:                    imx-secure-enclave
-Version:                    1.0
-Outgoing License:           BSD-3-Clause
-License File:               ./imx-secure-enclave/LICENSE
-Package Category:           NXP Security Enclave Library
-Type of content:            Source
-Description and comments:   This user library exposes HSM/NVM API(s) to invoke/use the
-                            feature-set of EdgeLock Enclave HW IP, enabled NXP devices.
-Origin:                     NXP (https://github.com/nxp-imx/imx-secure-enclave)
 
 Package:                    lvgl
 Version:                    8.3
