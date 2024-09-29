@@ -35,8 +35,8 @@ void setup_scr_screen(lv_ui *ui)
 	ui->g_kb_screen = lv_keyboard_create(ui->screen);
 	lv_obj_add_event_cb(ui->g_kb_screen, kb_event_cb, LV_EVENT_ALL, NULL);
 	lv_obj_add_flag(ui->g_kb_screen, LV_OBJ_FLAG_HIDDEN);
-	lv_obj_set_style_text_font(ui->g_kb_screen, &lv_font_montserratMedium_18, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_size(ui->screen, 1920, 1080);
+	lv_obj_set_style_text_font(ui->g_kb_screen, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_size(ui->screen, 1280, 720);
 	lv_obj_set_scrollbar_mode(ui->screen, LV_SCROLLBAR_MODE_OFF);
 
 	//Write style for screen, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
