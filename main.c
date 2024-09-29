@@ -22,10 +22,10 @@
 
 #include "demo_debug.h"
 
-#define DISP_BUF_SIZE (1920 * 1080)
+#define DISP_BUF_SIZE (1280 * 720)
 
-#define WAYLAND_HOR_RES      1920
-#define WAYLAND_VER_RES      1080
+#define WAYLAND_HOR_RES      1280
+#define WAYLAND_VER_RES      720
 #define WAYLAND_SURF_TITLE   "LVGL"
 
 lv_ui guider_ui;
@@ -87,7 +87,7 @@ int main(int argc, char *argv[])
     }
     INFO("example init succeed\n");
 
-    imageInit(&_penguin_alpha_277x412);
+    imageInit(&_penguin_alpha_184x274);
     INFO("%d\r\n",g_originalImage.data_size);
     if(loadData(&example,(uint8_t *)g_originalImage.data, g_originalImage.data_size)){
         ERROR("load data failed\n");

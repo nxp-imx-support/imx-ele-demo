@@ -62,20 +62,25 @@ void setup_ui(lv_ui *ui);
 extern lv_ui guider_ui;
 
 void setup_scr_screen(lv_ui *ui);
-LV_IMG_DECLARE(_whitebg1_alpha_1920x1080);
-LV_IMG_DECLARE(_point_alpha_2x2);
-LV_IMG_DECLARE(__alpha_277x412);
-LV_IMG_DECLARE(__alpha_277x412);
-LV_IMG_DECLARE(__alpha_277x412);
-LV_IMG_DECLARE(_NXP_Logo_RGB_Colour_alpha_220x109);
+LV_IMG_DECLARE(_whitebg1_alpha_1280x720);
+LV_IMG_DECLARE(_point_alpha_1x1);
+LV_IMG_DECLARE(_penguin_alpha_184x274);
+LV_IMG_DECLARE(_NXP_Logo_RGB_Colour_alpha_146x72);
 
-LV_FONT_DECLARE(lv_font_montserratMedium_25)
+// LV_FONT_DECLARE(lv_font_montserratMedium_25)
+// LV_FONT_DECLARE(lv_font_montserratMedium_16)
+// LV_FONT_DECLARE(lv_font_montserratMedium_30)
+// LV_FONT_DECLARE(lv_font_montserratMedium_12)
+// LV_FONT_DECLARE(lv_font_montserratMedium_20)
+// LV_FONT_DECLARE(lv_font_montserratMedium_50)
+// LV_FONT_DECLARE(lv_font_montserratMedium_18)
+
+
 LV_FONT_DECLARE(lv_font_montserratMedium_16)
-LV_FONT_DECLARE(lv_font_montserratMedium_30)
-LV_FONT_DECLARE(lv_font_montserratMedium_12)
+LV_FONT_DECLARE(lv_font_montserratMedium_10)
 LV_FONT_DECLARE(lv_font_montserratMedium_20)
-LV_FONT_DECLARE(lv_font_montserratMedium_50)
-LV_FONT_DECLARE(lv_font_montserratMedium_18)
+LV_FONT_DECLARE(lv_font_montserratMedium_13)
+LV_FONT_DECLARE(lv_font_montserratMedium_33)
 
 
 #ifdef __cplusplus

@@ -1,6 +1,5 @@
-## SPDX-License-Identifier: MIT
-## Copyright 2020-2023 NXP
-GEN_CSRCS += $(notdir $(wildcard $(PRJ_DIR)/generated/images/*.c))
+-include $(PRJ_DIR)/generated/images/images_list.mk
+-include $(PRJ_DIR)/generated/images/lottie_list.mk
 
 DEPPATH += --dep-path $(PRJ_DIR)/generated/images
 VPATH += :$(PRJ_DIR)/generated/images
