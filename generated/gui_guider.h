@@ -63,7 +63,7 @@ extern lv_ui guider_ui;
 
 void setup_scr_screen(lv_ui *ui);
 LV_IMG_DECLARE(_whitebg1_alpha_1280x720);
-LV_IMG_DECLARE(_point_alpha_1x1);
+LV_IMG_DECLARE(_point_alpha_2x2);
 LV_IMG_DECLARE(_penguin_alpha_184x274);
 LV_IMG_DECLARE(_NXP_Logo_RGB_Colour_alpha_146x72);
 
