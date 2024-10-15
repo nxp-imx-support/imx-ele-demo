@@ -78,7 +78,7 @@ int main(int argc, char *argv[])
 {
     hsm_err_t hsmret = HSM_GENERAL_ERROR;
 
-    INFO("crypto demo\n");
+    INFO("crypto demo version:%s\n", GITVERSION);
     hsmret = exampleInit(&example);
     if(hsmret != HSM_NO_ERROR){
         ERROR("example init failed\n");

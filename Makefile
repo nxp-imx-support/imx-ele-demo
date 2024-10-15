@@ -19,6 +19,7 @@ ifndef ELE_ROOT
 $(error "ELE_ROOT not defined")
 endif
 
+GITVERSION := $(shell git rev-parse --short HEAD)
 ELE_LIBRARIES := $(shell dirname $(shell find $(ELE_ROOT) -name "libele_hsm.so"))
 ELE_HSM_INCLUDE_DIR := $(shell dirname $(shell find $(ELE_ROOT) -name "hsm_api.h"))
 ELE_HSM_INCLUDE_DIR_PARENT := $(shell dirname $(ELE_HSM_INCLUDE_DIR))
@@ -38,7 +39,8 @@ LDFLAGS := -L$(ELE_LIBRARIES) -lcrypto -lele_hsm  -lwayland-client -lxkbcommon -
 CFLAGS += ${INCLUDE_PATHS}
 
 DEFINES =   -D PSA_COMPLIANT \
-			-D SECONDARY_API_SUPPORTED
+			-D SECONDARY_API_SUPPORTED \
+			-DGITVERSION=$(GITVERSION)
 
 CFLAGS += ${DEFINES}
 
