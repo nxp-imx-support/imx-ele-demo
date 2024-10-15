@@ -140,8 +140,8 @@ void setup_scr_screen(lv_ui *ui)
 
 	//Write codes screen_cont_2
 	ui->screen_cont_2 = lv_obj_create(ui->screen_cont_3);
-	lv_obj_set_pos(ui->screen_cont_2, 59, 90);
-	lv_obj_set_size(ui->screen_cont_2, 340, 340);
+	lv_obj_set_pos(ui->screen_cont_2, 94, 134);
+	lv_obj_set_size(ui->screen_cont_2, 255, 255);
 	lv_obj_set_scrollbar_mode(ui->screen_cont_2, LV_SCROLLBAR_MODE_OFF);
 
 	//Write style for screen_cont_2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -173,7 +173,7 @@ void setup_scr_screen(lv_ui *ui)
 	ui->screen_label_4 = lv_label_create(ui->screen_cont_3);
 	lv_label_set_text(ui->screen_label_4, "0");
 	lv_label_set_long_mode(ui->screen_label_4, LV_LABEL_LONG_WRAP);
-	lv_obj_set_pos(ui->screen_label_4, 13, 431);
+	lv_obj_set_pos(ui->screen_label_4, 41, 394);
 	lv_obj_set_size(ui->screen_label_4, 66, 21);
 	lv_obj_set_scrollbar_mode(ui->screen_label_4, LV_SCROLLBAR_MODE_OFF);
 
@@ -196,7 +196,7 @@ void setup_scr_screen(lv_ui *ui)
 	ui->screen_label_2 = lv_label_create(ui->screen_cont_3);
 	lv_label_set_text(ui->screen_label_2, "255");
 	lv_label_set_long_mode(ui->screen_label_2, LV_LABEL_LONG_WRAP);
-	lv_obj_set_pos(ui->screen_label_2, 382, 433);
+	lv_obj_set_pos(ui->screen_label_2, 328, 394);
 	lv_obj_set_size(ui->screen_label_2, 66, 21);
 	lv_obj_set_scrollbar_mode(ui->screen_label_2, LV_SCROLLBAR_MODE_OFF);
 
@@ -219,7 +219,7 @@ void setup_scr_screen(lv_ui *ui)
 	ui->screen_label_3 = lv_label_create(ui->screen_cont_3);
 	lv_label_set_text(ui->screen_label_3, "255");
 	lv_label_set_long_mode(ui->screen_label_3, LV_LABEL_LONG_WRAP);
-	lv_obj_set_pos(ui->screen_label_3, -2, 92);
+	lv_obj_set_pos(ui->screen_label_3, 41, 132);
 	lv_obj_set_size(ui->screen_label_3, 66, 21);
 	lv_obj_set_scrollbar_mode(ui->screen_label_3, LV_SCROLLBAR_MODE_OFF);
 
@@ -479,8 +479,8 @@ void setup_scr_screen(lv_ui *ui)
 	#if LV_USE_KEYBOARD != 0 || LV_USE_ZH_KEYBOARD != 0
 		lv_obj_add_event_cb(ui->screen_content, ta_event_cb, LV_EVENT_ALL, ui->g_kb_screen);
 	#endif
-	lv_obj_set_pos(ui->screen_content, 63, 70);
-	lv_obj_set_size(ui->screen_content, 329, 70);
+	lv_obj_set_pos(ui->screen_content, 42, 46);
+	lv_obj_set_size(ui->screen_content, 219, 46);
 	lv_obj_set_scrollbar_mode(ui->screen_content, LV_SCROLLBAR_MODE_OFF);
 
 	lv_textarea_set_password_mode(ui->screen_content, true);

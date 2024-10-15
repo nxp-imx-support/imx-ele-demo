@@ -98,11 +98,9 @@ static void screen_generate_event_handler (lv_event_t *e)
         for(int i = 0; i< 100; i++){
             point_group[i] = lv_img_create(guider_ui.screen_cont_2);
             lv_obj_add_flag(point_group[i], LV_OBJ_FLAG_CLICKABLE);
-            lv_img_set_src(point_group[i], &_point_alpha_2x2);
+            lv_img_set_src(point_group[i], &_point_alpha_1x1);
             lv_img_set_pivot(point_group[i], 50,50);
             lv_img_set_angle(point_group[i], 0);
-            random[i*2] = random[i*2] % 171;
-            random[i*2+1] = random[i*2+1] % 171;
             lv_obj_set_pos(point_group[i], 2*random[i*2], 2*random[i*2+1]);
             lv_obj_set_size(point_group[i], 5, 5);
             lv_obj_set_scrollbar_mode(point_group[i], LV_SCROLLBAR_MODE_OFF);
