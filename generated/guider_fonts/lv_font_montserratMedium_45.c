@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 NXP
+ * Copyright 2024 NXP
  * NXP Confidential and Proprietary. This software is owned or controlled by NXP and may only be used strictly in
  * accordance with the applicable license terms. By expressly accepting such terms or by downloading, installing,
  * activating and/or otherwise using the software, you are agreeing that you have read, and that you agree to
@@ -9,7 +9,7 @@
 /*******************************************************************************
  * Size: 45 px
  * Bpp: 4
- * Opts: --user-data-dir=C:\Users\nxf64111\AppData\Roaming\gui-guider --app-path=C:\NXP\GUI-Guider-1.6.0-GA\resources\app.asar --no-sandbox --no-zygote --lang=zh-CN --device-scale-factor=1.25 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=5 --time-ticks-at-unix-epoch=-1698733006804844 --launch-time-ticks=70055785070 --mojo-platform-channel-handle=3128 --field-trial-handle=1640,i,4982921326411847666,4896111034262046916,131072 --disable-features=SpareRendererForSitePerProcess,WinRetrieveSuggestionsOnlyOnDemand /prefetch:1
+ * Opts:undefined
  ******************************************************************************/
 
 #ifdef LV_LVGL_H_INCLUDE_SIMPLE
